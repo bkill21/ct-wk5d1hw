@@ -50,9 +50,10 @@ WHERE last_name LIKE '%es';
 --How many payment amounts had a number of rentals above 250 for customers with ids between 380 and 430?
 SELECT amount, count(amount)
 FROM payment
+WHERE customer_id BETWEEN 380 AND 430
 GROUP BY amount
 HAVING count(amount) > 250;
---There are 9 payment amounts that have above 250 rentals
+--There are 3 payment amounts that have above 250 rentals
 
 --Within the film table, how many rating categories are there? And what rating has the most movies total?
 SELECT rating, count(rating)
